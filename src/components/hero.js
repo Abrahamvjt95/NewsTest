@@ -41,7 +41,7 @@ function Hero() {
   return (
     <div className="App">
       <Container className="p-12">
-        <div class="row rowheader ">
+        {latest[0] ? <div class="row rowheader ">
           <Card className="text-center mb-5">
             <Card.Header>
               {latest[0].categorie}
@@ -63,7 +63,7 @@ function Hero() {
               ) : null}
             </Card.Footer>
           </Card>
-        </div>
+        </div> : <h1>Nothing to Show</h1>}
         <Row>
           <div class="card-group">
             <PaginatedItems itemsPerPage={6} />
